@@ -1,9 +1,14 @@
 const btn = document.querySelector('.menu-btn');
 const list = document.getElementById('menu');
+function setMenu(open) {
+  list.classList.toggle('open', open);
+  btn.setAttribute('aria-expanded', open);
+}
 if (btn && list) {
-  btn.addEventListener('click', () => {
-    const open = list.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open);
+  btn.addEventListener('click', () => setMenu(!list.classList.contains('open')));
+  list.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && list.classList.contains('open')) { setMenu(false); btn.focus(); }
   });
 }
 const form = document.getElementById('contact');

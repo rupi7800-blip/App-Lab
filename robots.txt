@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://rupi7800-blip.github.io/App-Lab/sitemap.xml
