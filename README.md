@@ -1,6 +1,6 @@
 # App Lab
 
-Sito vetrina di **App Lab – Laboratorio di applicazioni web su misura** per liberi professionisti, artigiani, commercianti, ditte individuali e PMI.
+Sito vetrina di **App Lab – Laboratorio di applicazioni web su misura** per liberi professionisti, artigiani, commercianti, attività ricettive e ristorazione, ditte individuali e PMI.
 
 Sito statico (HTML + CSS + un po' di JS), nessuna build necessaria: apri `index.html` o servi la cartella con qualsiasi web server.
 
