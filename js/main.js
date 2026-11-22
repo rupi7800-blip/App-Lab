@@ -17,6 +17,6 @@ if (form) {
     e.preventDefault();
     const d = new FormData(form);
     const body = `Nome: ${d.get('nome')}\nEmail: ${d.get('email')}\nAttività: ${d.get('tipo')}\n\n${d.get('messaggio')}`;
-    location.href = `mailto:${form.dataset.email}?subject=${encodeURIComponent('Richiesta dal sito App Lab')}&body=${encodeURIComponent(body)}`;
+    location.href = `mailto:${form.dataset.email}?subject=${encodeURIComponent('Richiesta dal sito App-Lab')}&body=${encodeURIComponent(body)}`;
   });
 }
