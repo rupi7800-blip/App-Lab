@@ -122,7 +122,7 @@ header :focus-visible,.hero :focus-visible,.page-head :focus-visible,.band :focu
 .page-head{padding:56px 0 48px}
 .hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:32px;align-items:center}
 .hero-logo{width:100%;max-width:460px;height:auto;justify-self:end;-webkit-mask-image:radial-gradient(closest-side,#000 72%,transparent 100%);mask-image:radial-gradient(closest-side,#000 72%,transparent 100%)}
-@media(max-width:820px){.hero-grid{grid-template-columns:1fr}.hero-logo{max-width:220px;justify-self:start;order:-1}}
+@media(max-width:820px){.hero-grid{grid-template-columns:1fr}.hero-logo{display:none}}
 .steps li::before{background:var(--aqua);color:var(--navy)}
 .band{background:var(--navy);color:#fff;border:1px solid var(--navy-line)}
 .band .btn{background:var(--aqua);color:var(--navy)}
@@ -130,3 +130,5 @@ footer{background:var(--navy);color:#9fb3be;border-top:0}
 footer strong{color:#fff}
 .foot a{color:#b8c9d2}
 .foot a:hover{color:#fff}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 0;padding:0}
+.chips li{font-size:.92rem;color:#d3e0e6;border:1px solid var(--navy-line);background:#0b2230;border-radius:999px;padding:6px 14px}
