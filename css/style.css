@@ -132,3 +132,21 @@ footer strong{color:#fff}
 .foot a:hover{color:#fff}
 .chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 0;padding:0}
 .chips li{font-size:.92rem;color:#d3e0e6;border:1px solid var(--navy-line);background:#0b2230;border-radius:999px;padding:6px 14px}
+
+/* ---- Icone a tratto (al posto delle emoji) ---- */
+.ico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--brand) 12%,transparent);color:var(--brand);margin-bottom:14px;font-size:1rem;line-height:0}
+.ico svg,.chips svg{stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.ico svg{width:24px;height:24px}
+.chips li{display:inline-flex;align-items:center;gap:8px}
+.chips svg{width:16px;height:16px;color:var(--aqua)}
+/* ---- Progetti ---- */
+.projects{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.project{display:flex;flex-direction:column}
+.project .btn{margin-top:auto;align-self:flex-start}
+.project p{margin-bottom:18px}
+.project.soon{border-style:dashed;background:transparent}
+.pj-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.status{font-size:.8rem;font-weight:700;padding:3px 10px;border-radius:999px}
+.status.live{color:var(--brand);background:color-mix(in srgb,var(--brand) 15%,transparent)}
+.status.soon{color:var(--muted);background:color-mix(in srgb,var(--muted) 14%,transparent)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
