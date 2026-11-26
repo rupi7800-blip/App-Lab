@@ -29,9 +29,6 @@ ICONS = {
 def svg(name):
     return f'<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">{ICONS[name]}</svg>'
 
-EMOJI = {"🎯":"ruler","⏱":"clock","🌐":"devices","🤝":"chat","🧩":"blocks","⚙":"gear","🔗":"link","🛟":"lifebuoy",
-         "📅":"calendar","🧾":"doc","👥":"users","📦":"box","📊":"bars","🛎":"bell"}
-
 def ver(path):
     return hashlib.md5(open(os.path.join(OUT, path), "rb").read()).hexdigest()[:8]
 
@@ -122,7 +119,7 @@ def project_cards(items):
     for pj in items:
         live = pj["url"] is not None
         tag = f'<span class="status {"live" if live else "soon"}">{pj["status"]}</span>'
-        link = (f'<a class="btn" href="{pj["url"]}" target="_blank" rel="noopener">{pj["cta"]} <span aria-hidden="true">↗</span>'
+        link = (f'<a class="btn" href="{pj["url"]}" target="_blank" rel="noopener">{pj["cta"]}<span aria-hidden="true"> ↗</span>'
                 f'<span class="sr">, si apre in una nuova scheda</span></a>') if live else ""
         out += (f'<div class="card project{"" if live else " soon"}"><div class="pj-head"><div class="ico">[[ic:{pj["icon"]}]]</div>{tag}</div>'
                 f'<h3>{pj["name"]}</h3><p>{pj["text"]}</p>{link}</div>')
@@ -282,7 +279,6 @@ page("privacy.html", "Privacy – App-Lab", "Informativa sul trattamento dei dat
 # 404, robots, sitemap
 page("404.html", "Pagina non trovata – App-Lab", "Pagina non trovata.",
  '<section class="hero"><div class="wrap"><h1>Pagina non trovata</h1><p class="lead">Il link potrebbe essere errato o la pagina spostata.</p><a class="btn" href="index.html">Torna alla home</a></div></section>', base=True)
-open(os.path.join(OUT, "robots.txt"), "w").write("User-agent: *\nAllow: /\n")
 
 pages=[h for h,_ in NAV]+["privacy.html"]
 open(os.path.join(OUT,"sitemap.xml"),"w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+"".join(f"<url><loc>{SITE}{'' if h=='index.html' else h}</loc></url>\n" for h in pages)+'</urlset>\n')
